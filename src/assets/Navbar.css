@@ -1,0 +1,40 @@
+.nav {
+    background-color: #333;
+    color: white;
+
+    /* make nav container flex and add space in between child elements. */
+    display: flex;
+    /* justify-content is used on the main axis, which by default is horizontal */
+    justify-content: space-between;
+    /* align-items is used on the cross axis, which by default is vertical */
+    align-items: center;
+
+    /* when the container becomes very small, all elements inside will have a gap between them */
+    gap: 2rem;
+    /* add padding the edges of container, left & right */
+    padding: 0 1rem;
+}
+
+.site-title {
+    font-size: 2rem;
+}
+
+.nav ul {
+    /* remove unnecessary padding & margin */
+    padding: 0;
+    margin: 0;
+
+    /* remove bullet points */
+    list-style: none;
+
+    /* set display flex & set gap between li elements*/
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    /* inherit color from parent, AKA nav */
+    color: inherit;
+
+    text-decoration: none;
+}
