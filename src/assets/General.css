@@ -6,4 +6,10 @@
 
 body {
     margin: 0;
+    background-color: rgb(32, 32, 32);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    padding: 2rem;
 }
