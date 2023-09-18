@@ -38,3 +38,11 @@
 
     text-decoration: none;
 }
+
+.nav li.active {
+    background-color: darkblue;
+}
+
+.nav li:hover {
+    background-color: darkmagenta;
+}
