@@ -1,7 +1,10 @@
+/* border: 1px solid gray; */
 .card {
     background-color: white;
-    width: 250px;
+    width: 350px;
     border-radius: 5px;
+
+    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.199));
 }
 
 .card-image {
@@ -14,5 +17,45 @@
 .cards-container {
     display: flex;
     gap: 1rem;
-    border: 1px solid red;
+}
+
+.card-header {
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.card-header ul {
+    /* remove unnecessary padding & margin */
+    padding: 0;
+    margin: 0;
+
+    /* remove bullet points */
+    list-style: none;
+    /* set display flex & set gap between li elements*/
+    display: flex;
+    /* justify-content is used on the main axis, which by default is horizontal */
+    justify-content: space-between;
+    /* when the container becomes very small, all elements inside will have a gap between them */
+    gap: 1rem;
+    /* add padding the edges of container, left & right */
+    padding: 0 0.5rem;
+}
+
+.card-details ul {
+    /* remove unnecessary padding & margin */
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    height: 2rem;
+
+    /* remove bullet points */
+    list-style: none;
+    /* set display flex & set gap between li elements*/
+    display: flex;
+    /* justify-content is used on the main axis, which by default is horizontal */
+    justify-content: space-between;
+    /* when the container becomes very small, all elements inside will have a gap between them */
+    gap: 1rem;
+    /* add padding the edges of container, left & right */
+    padding: 0 0.5rem;
 }
