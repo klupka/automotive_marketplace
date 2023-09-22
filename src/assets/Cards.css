@@ -5,6 +5,15 @@
 
     /* text color */
     color: white;
+    transition-duration: 0.05s;
+    transition-timing-function: ease-in-out;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 80px 1px #ffffff1c;
+    background-color: #ffffff0c;
 }
 
 .card-image {
@@ -14,9 +23,16 @@
     height: 250px;
     border-radius: 8px 8px 4px 4px;
 }
-.cards-container {
+.cards-flexbox {
     display: flex;
+    justify-content: center;
+}
+
+.cards-container {
     gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card-text-box {
@@ -25,6 +41,11 @@
     border-radius: 4px 4px 8px 8px;
     padding: 0.5rem;
     background-color: #424242;
+}
+
+.card-text-box:hover {
+    background-color: #505050;
+    text-decoration: underline;
 }
 
 .card-header {
