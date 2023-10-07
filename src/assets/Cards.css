@@ -30,7 +30,7 @@
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
 }
 
@@ -76,4 +76,10 @@
     justify-content: space-between;
 
     margin-top: 0.5rem;
+}
+
+.cards-filter-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
