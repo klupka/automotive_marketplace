@@ -10,18 +10,16 @@
     text-decoration: none;
 }
 
-.card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 80px 1px #ffffff1c;
-    background-color: #ffffff0c;
-}
-
 .card-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 250px;
-    border-radius: 8px 8px 4px 4px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card:hover {
+    filter: brightness(85%);
 }
 .cards-flexbox {
     display: flex;
@@ -32,20 +30,17 @@
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
 }
 
 .card-text-box {
-    margin-top: 0.4rem;
     background-color: white;
-    border-radius: 4px 4px 8px 8px;
+    border-radius: 0px 0px 4px 4px;
     padding: 0.5rem;
     background-color: #424242;
-}
 
-.card-text-box:hover {
-    background-color: #505050;
-    text-decoration: underline;
+    height: 4rem;
 }
 
 .card-header {
@@ -79,4 +74,6 @@
     display: flex;
     /* justify-content is used on the main axis, which by default is horizontal */
     justify-content: space-between;
+
+    margin-top: 0.5rem;
 }

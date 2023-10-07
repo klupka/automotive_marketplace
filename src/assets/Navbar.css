@@ -11,8 +11,6 @@
 
     /* when the container becomes very small, all elements inside will have a gap between them */
     gap: 2rem;
-    /* add padding the edges of container, left & right */
-    padding: 0 2rem;
 }
 
 .site-title {
