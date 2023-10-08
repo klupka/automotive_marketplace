@@ -80,3 +80,17 @@
 
     margin-top: 0.5rem;
 }
+
+.bidPriceText {
+    margin-right: 0.5rem;
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+.clock-mileage-icon {
+    margin-right: 0.3rem;
+}
+
+.mileage-text-icon-container {
+    margin-right: 1rem;
+}

@@ -27,7 +27,3 @@
     background-color: #757575;
     border-radius: 4px;
 }
-
-#listbox {
-    --smart-list-box-border-top-right-radius: 10px;
-}

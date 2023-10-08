@@ -1,6 +1,9 @@
 import "../assets/Cards.css";
 import { cars } from "../assets/sample_data";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faGauge } from "@fortawesome/free-solid-svg-icons";
+
 function Card({
     Image,
     Year,
@@ -13,6 +16,17 @@ function Card({
 }) {
     let carName = `${Year} ${Brand} ${Model}`;
     let mileageStr;
+    let priceStr;
+
+    // Remove '$' and ',' from price string.
+    priceStr = Price.slice(1);
+    priceStr = priceStr.replace(/,/g, "");
+    // Convert price string to int and round to nearest hundred.
+    priceStr = parseInt(priceStr);
+    priceStr = Math.floor(priceStr / 100) * 100;
+    // Convert price int back to string with commas and add '$' to front.
+    priceStr = priceStr.toLocaleString();
+    priceStr = "$" + priceStr;
 
     if (Mileage > 99999) {
         let roundedValue = Mileage.toFixed(3);
@@ -42,14 +56,26 @@ function Card({
                 <div className="card-header">
                     <ul>
                         <li>{carName}</li>
-                        <li>{Price}</li>
+                        <li>
+                            <span className="bidPriceText">Bid:</span>
+                            {priceStr}
+                        </li>
                     </ul>
                 </div>
                 <div className="card-details">
                     <ul>
                         <li>{Location}</li>
                         <li>
-                            {mileageStr} • {TimeLeft}
+                            <span className="mileage-text-icon-container">
+                                <span className="clock-mileage-icon">
+                                    <FontAwesomeIcon icon={faGauge} />
+                                </span>
+                                {mileageStr}
+                            </span>
+                            <span className="clock-mileage-icon">
+                                <FontAwesomeIcon icon={faClock} />
+                            </span>
+                            {TimeLeft}
                         </li>
                     </ul>
                 </div>
