@@ -1,0 +1,33 @@
+.cards-filter-container {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #424242;
+    padding: 1rem;
+    border-radius: 4px;
+    height: 4rem;
+}
+
+.cards-filter-container select {
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #757575;
+    border-radius: 4px;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+    margin-left: -1.5rem;
+}
+
+.cards-filter-container option {
+    background-color: #757575;
+    border-radius: 4px;
+}
+
+#listbox {
+    --smart-list-box-border-top-right-radius: 10px;
+}

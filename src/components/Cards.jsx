@@ -2,19 +2,29 @@ import "../assets/Cards.css";
 import { cars } from "../assets/sample_data";
 
 function Card({
-    imageURL,
-    year,
-    brand,
-    model,
-    mileage,
-    price,
-    location,
-    timeLeft,
+    Image,
+    Year,
+    Brand,
+    Model,
+    Mileage,
+    Location,
+    TimeLeft,
+    Price,
 }) {
-    let carName = `${year} ${brand} ${model}`;
-    let bgImage = `background-image:url('${imageURL}')`;
-    let priceStr = `$${price}`;
-    let mileageStr = `${mileage} mi`;
+    let carName = `${Year} ${Brand} ${Model}`;
+    let mileageStr;
+
+    if (Mileage > 99999) {
+        let roundedValue = Mileage.toFixed(3);
+        mileageStr = roundedValue.toString();
+        mileageStr = mileageStr.slice(0, 3);
+        mileageStr = mileageStr + "k mi";
+    } else if (Mileage < 100000) {
+        let roundedValue = Mileage.toFixed(2);
+        mileageStr = roundedValue.toString();
+        mileageStr = mileageStr.slice(0, 2);
+        mileageStr = mileageStr + "k mi";
+    }
 
     // if name > 30, then cut off name
     if (carName.length > 30) {
@@ -25,20 +35,22 @@ function Card({
         <a href="" className="card">
             <div
                 className="card-image"
-                style={{ backgroundImage: `url(${imageURL})` }}
+                style={{ backgroundImage: `url(${Image})` }}
                 alt={carName}
             ></div>
             <div className="card-text-box">
                 <div className="card-header">
                     <ul>
                         <li>{carName}</li>
-                        <li>{priceStr}</li>
+                        <li>{Price}</li>
                     </ul>
                 </div>
                 <div className="card-details">
                     <ul>
-                        <li>{location}</li>
-                        <li>{timeLeft}</li>
+                        <li>{Location}</li>
+                        <li>
+                            {mileageStr} • {TimeLeft}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -51,9 +63,8 @@ const Cards = () => {
     return (
         <div className="cards-flexbox">
             <div className="cards-container">
-                {" "}
                 {cars.map((car) => (
-                    <Card {...car} key={car.price} />
+                    <Card {...car} key={car.Price} />
                 ))}
             </div>
         </div>

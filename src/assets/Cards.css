@@ -1,6 +1,6 @@
 /* border: 1px solid gray; */
 .card {
-    width: 350px;
+    width: 363px;
     border-radius: 5px;
 
     /* text color */
@@ -19,7 +19,7 @@
 }
 
 .card:hover {
-    filter: brightness(85%);
+    filter: brightness(70%);
 }
 .cards-flexbox {
     display: flex;
@@ -32,6 +32,9 @@
     flex-wrap: wrap;
     justify-content: start;
     width: 100%;
+
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .card-text-box {
@@ -76,10 +79,4 @@
     justify-content: space-between;
 
     margin-top: 0.5rem;
-}
-
-.cards-filter-container {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 1rem;
 }
