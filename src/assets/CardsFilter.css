@@ -12,7 +12,6 @@
 
 .cards-filter-container select {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
     background-color: #e6e6e6;
     border-radius: 4px;
     border: none;
@@ -25,10 +24,11 @@
 }
 
 .cards-filter-container option {
-    background-color: white;
+    background-color: #f3f4f6;
     border-radius: 4px;
 }
 
 select:hover {
-    border-color: transparent;
+    background-color: #cfcfcf;
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 /* note: default font size = 16px = 1rem */
 /*
-Text            #000000     Black
-Background      #FFFFFF     White
+Text            #16181D     Black
+Background      #F3F4F6     White
 Primary         #2c75ff     Blue
 Secondary       #cfcfcf     Light Gray
 Other           #e6e6e6     Lighter Gray
@@ -14,9 +14,9 @@ Accent          #696969     Gray
 
 body {
     margin: 0;
-    background-color: white;
+    background-color: #f3f4f6;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
+    color: #16181d;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;

@@ -1,6 +1,15 @@
-.nav {
-    font-weight: bold;
+@font-face {
+    font-family: "Pacifico"; /*Can be any text*/
+    src: local("Pacifico"), url("./fonts/Pacifico-Regular.ttf");
+}
 
+@font-face {
+    font-family: "RacingSans"; /*Can be any text*/
+    src: local("RacingSansOne-Regular"),
+        url("./fonts/RacingSansOne-Regular.ttf");
+}
+
+.nav {
     /* make nav container flex and add space in between child elements. */
     display: flex;
     /* justify-content is used on the main axis, which by default is horizontal */
@@ -10,11 +19,12 @@
 
     /* when the container becomes very small, all elements inside will have a gap between them */
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .site-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .nav ul {
@@ -37,10 +47,30 @@
     text-decoration: none;
 }
 
+.nav li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+
+    border-bottom: 2px solid transparent;
+
+    color: #5a6277;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 .nav li.active {
-    background-color: darkblue;
+    border-bottom: 2px solid #16181d;
+    color: #16181d;
 }
 
 .nav li:hover {
-    background-color: darkmagenta;
+}
+
+.turbo {
+    color: #2c75ff;
+}
+
+.siteTitle {
+    font-family: "RacingSans";
 }

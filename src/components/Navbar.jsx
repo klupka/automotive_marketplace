@@ -3,12 +3,15 @@
 // useMatch is used to compare path data.
 // useResolvedPath returns the full, entire path of your url.
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import "../assets/Navbar.css";
 
 const Navbar = () => {
     return (
         <nav className="nav">
             <Link to="/" className="site-title">
-                AutoMarket
+                <span className="siteTitle">
+                    <span className="turbo">Turbo</span>Bids
+                </span>
             </Link>
             <ul>
                 <CustomLink to="/Auctions">Auctions</CustomLink>
