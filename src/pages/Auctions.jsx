@@ -1,10 +1,11 @@
 import Cards from "../components/Cards";
 import CardsFilter from "../components/CardsFilter";
+import "../assets/General.css";
 
 const Auctions = () => {
     return (
         <>
-            <h1>Auctions</h1>
+            <hr></hr>
             <CardsFilter />
             <Cards />
         </>

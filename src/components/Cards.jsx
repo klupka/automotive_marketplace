@@ -58,7 +58,7 @@ function Card({
                         <li>{carName}</li>
                         <li>
                             <span className="bidPriceText">Bid:</span>
-                            {priceStr}
+                            <span className="priceText">{priceStr}</span>
                         </li>
                     </ul>
                 </div>

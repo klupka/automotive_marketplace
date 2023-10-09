@@ -1,4 +1,12 @@
 /* note: default font size = 16px = 1rem */
+/*
+Text            #000000     Black
+Background      #FFFFFF     White
+Primary         #2c75ff     Blue
+Secondary       #cfcfcf     Light Gray
+Other           #e6e6e6     Lighter Gray
+Accent          #696969     Gray
+*/
 
 * {
     box-sizing: border-box;
@@ -6,13 +14,16 @@
 
 body {
     margin: 0;
-    background-color: #212121;
+    background-color: white;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    color: black;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.container {
+hr {
+    height: 1px;
+    background-color: #cfcfcf;
+    border: none;
 }

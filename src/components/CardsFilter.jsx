@@ -3,22 +3,32 @@ import "../assets/CardsFilter.css";
 const CardsFilter = () => {
     return (
         <div className="cards-filter-container">
-            <label htmlFor="sort">Sort by : </label>
-            <select id="sort" name="sort">
+            <h2>Auctions</h2>
+            <select name="sort">
+                <option value="PopularNow">Popular Now</option>
                 <option value="PriceLowToHigh">Price: Low to High</option>
                 <option value="PriceHighToLow">Price: High to Low</option>
                 <option value="Newest">Newest</option>
+                <option value="Newest">Ending Soon</option>
                 <option value="Closest">Closest</option>
             </select>
-            <label htmlFor="cars">Brand : </label>
-            <select id="cars" name="cars">
+            <select name="manufacturer">
+                <option value="" disabled selected hidden>
+                    Manufacturer
+                </option>
                 <option value="volvo">Ford</option>
                 <option value="saab">Chevrolet</option>
                 <option value="fiat">Lexus</option>
                 <option value="audi">Honda</option>
             </select>
-            <input type="radio" value="Shipping" name="gender" /> Shipping
-            <input type="radio" value="Local" name="gender" /> Local
+            <select name="transmission">
+                <option value="" disabled selected hidden>
+                    Transmission
+                </option>
+                <option value="All">All</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+            </select>
         </div>
     );
 };
