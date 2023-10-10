@@ -4,11 +4,10 @@ import "../assets/General.css";
 
 const Auctions = () => {
     return (
-        <>
-            <hr></hr>
+        <div className="page-animation">
             <CardsFilter />
             <Cards />
-        </>
+        </div>
     );
 };
 

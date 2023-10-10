@@ -4,20 +4,38 @@
 // useResolvedPath returns the full, entire path of your url.
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "../assets/Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     return (
-        <nav className="nav">
-            <Link to="/" className="site-title">
-                <span className="siteTitle">
-                    <span className="turbo">Turbo</span>Bids
-                </span>
-            </Link>
-            <ul>
-                <CustomLink to="/Auctions">Auctions</CustomLink>
-                <CustomLink to="/About">About</CustomLink>
-            </ul>
-        </nav>
+        <>
+            <nav className="nav">
+                <Link to="/" className="site-title">
+                    <span className="siteTitle">
+                        <span className="turbo">Turbo</span>Bids
+                    </span>
+                </Link>
+                <ul>
+                    <form>
+                        <input
+                            className="search-bar"
+                            type="text"
+                            placeholder="Search vehicles"
+                        />
+                    </form>
+                    <span className="search-button-container">
+                        <FontAwesomeIcon
+                            className="search-button"
+                            icon={faMagnifyingGlass}
+                        />
+                    </span>
+                    <CustomLink to="/Auctions">Auctions</CustomLink>
+                    <CustomLink to="/About">About</CustomLink>
+                </ul>
+            </nav>
+            <hr></hr>
+        </>
     );
 };
 

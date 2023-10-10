@@ -13,7 +13,7 @@ const CardsFilter = () => {
                 <option value="Closest">Closest</option>
             </select>
             <select name="manufacturer">
-                <option value="" disabled selected hidden>
+                <option value="" hidden defaultValue>
                     Manufacturer
                 </option>
                 <option value="volvo">Ford</option>
@@ -22,7 +22,7 @@ const CardsFilter = () => {
                 <option value="audi">Honda</option>
             </select>
             <select name="transmission">
-                <option value="" disabled selected hidden>
+                <option value="" hidden defaultValue>
                     Transmission
                 </option>
                 <option value="All">All</option>

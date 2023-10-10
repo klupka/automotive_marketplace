@@ -12,6 +12,24 @@ Accent          #696969     Gray
     box-sizing: border-box;
 }
 
+html {
+    /* scrollbar no longer changes width of page */
+    overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #696969;
+    box-shadow: inset 0vw 0vw 0vw 0.15vw #f3f4f6;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #f3f4f6;
+}
+
 body {
     margin: 0;
     background-color: #f3f4f6;
@@ -26,4 +44,19 @@ hr {
     height: 1px;
     background-color: #cfcfcf;
     border: none;
+}
+
+.page-animation {
+    animation: page-load 300ms ease-out;
+}
+
+@keyframes page-load {
+    0% {
+        transform: translateY(0.2vw);
+        opacity: 80%;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
 }

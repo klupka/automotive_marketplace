@@ -1,6 +1,6 @@
 /* border: 1px solid gray; */
 .card {
-    width: 363px;
+    /* width: 363px; */
     border-radius: 5px;
 
     /* text color */
@@ -9,6 +9,9 @@
     transition-timing-function: ease-in-out;
     text-decoration: none;
     margin-bottom: 3rem;
+
+    flex-grow: 1;
+    width: 363px;
 }
 
 .card-image {
@@ -102,4 +105,8 @@
     background-color: #2c75ff;
     padding: 0.25rem;
     border-radius: 4px;
+}
+
+.priceText:hover {
+    filter: brightness(130%);
 }
