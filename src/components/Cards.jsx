@@ -4,22 +4,25 @@ import { cars } from "../assets/sample_data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faGauge } from "@fortawesome/free-solid-svg-icons";
 
-function Card({
-    Image,
-    Year,
-    Brand,
-    Model,
-    Mileage,
-    Location,
-    TimeLeft,
-    Price,
-}) {
-    let carName = `${Year} ${Brand} ${Model}`;
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
+
+function Card({ ...car }) {
+    let index = car.Index;
+    let image = car.Image;
+    let year = car.Year;
+    let brand = car.Brand;
+    let model = car.Model;
+    let mileage = car.Mileage;
+    let location = car.Location;
+    let timeLeft = car.TimeLeft;
+    let price = car.Price;
+
+    let carName = `${year} ${brand} ${model}`;
     let mileageStr;
     let priceStr;
 
     // Remove '$' and ',' from price string.
-    priceStr = Price.slice(1);
+    priceStr = price.slice(1);
     priceStr = priceStr.replace(/,/g, "");
     // Convert price string to int and round to nearest hundred.
     priceStr = parseInt(priceStr);
@@ -28,13 +31,13 @@ function Card({
     priceStr = priceStr.toLocaleString();
     priceStr = "$" + priceStr;
 
-    if (Mileage > 99999) {
-        let roundedValue = Mileage.toFixed(3);
+    if (mileage > 99999) {
+        let roundedValue = mileage.toFixed(3);
         mileageStr = roundedValue.toString();
         mileageStr = mileageStr.slice(0, 3);
         mileageStr = mileageStr + "k mi";
-    } else if (Mileage < 100000) {
-        let roundedValue = Mileage.toFixed(2);
+    } else if (mileage < 100000) {
+        let roundedValue = mileage.toFixed(2);
         mileageStr = roundedValue.toString();
         mileageStr = mileageStr.slice(0, 2);
         mileageStr = mileageStr + "k mi";
@@ -46,10 +49,10 @@ function Card({
         carName = carName.concat("...");
     }
     return (
-        <a href="" className="card">
+        <Link to={`/Auction/${index}`} state={{ ...car }} className="card">
             <div
                 className="card-image"
-                style={{ backgroundImage: `url(${Image})` }}
+                style={{ backgroundImage: `url(${image})` }}
                 alt={carName}
             ></div>
             <div className="card-text-box">
@@ -64,7 +67,7 @@ function Card({
                 </div>
                 <div className="card-details">
                     <ul>
-                        <li>{Location}</li>
+                        <li>{location}</li>
                         <li>
                             <span className="mileage-text-icon-container">
                                 <span className="clock-mileage-icon">
@@ -75,12 +78,12 @@ function Card({
                             <span className="clock-mileage-icon">
                                 <FontAwesomeIcon icon={faClock} />
                             </span>
-                            {TimeLeft}
+                            {timeLeft}
                         </li>
                     </ul>
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
 
@@ -90,7 +93,7 @@ const Cards = () => {
         <div className="cards-flexbox">
             <div className="cards-container">
                 {cars.map((car) => (
-                    <Card {...car} key={car.Price} />
+                    <Card {...car} key={car.Index} />
                 ))}
             </div>
         </div>

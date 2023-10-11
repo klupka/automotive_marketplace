@@ -6,9 +6,11 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Auctions from "./pages/Auctions";
 import About from "./pages/About";
+import Auction from "./pages/Auction";
 
 function App() {
     // Render components
+    // Define all routes below
     return (
         <>
             <Navbar />
@@ -17,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/Auctions" element={<Auctions />} />
                     <Route path="/About" element={<About />} />
+                    <Route path="/Auction/*" element={<Auction />} />
                 </Routes>
             </div>
         </>
