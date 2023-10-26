@@ -1,4 +1,4 @@
-import "../assets/Cards.css";
+import "../assets/css/Cards.css";
 import { cars } from "../assets/sample_data";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -90,12 +90,10 @@ function Card({ ...car }) {
 const Cards = () => {
     // change key soon
     return (
-        <div className="cards-flexbox">
-            <div className="cards-container">
-                {cars.map((car) => (
-                    <Card {...car} key={car.Index} />
-                ))}
-            </div>
+        <div className="cards">
+            {cars.map((car) => (
+                <Card {...car} key={car.Index} />
+            ))}
         </div>
     );
 };

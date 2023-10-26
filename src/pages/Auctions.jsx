@@ -1,6 +1,6 @@
 import Cards from "../components/Cards";
 import CardsFilter from "../components/CardsFilter";
-import "../assets/General.css";
+import "../assets/css/General.css";
 
 const Auctions = () => {
     return (

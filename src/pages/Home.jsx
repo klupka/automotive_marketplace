@@ -1,4 +1,4 @@
-import "../assets/General.css";
+import "../assets/css/General.css";
 
 const Home = () => {
     return <div className="page-animation">home</div>;

@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Pacifico"; /*Can be any text*/
-    src: local("Pacifico"), url("./fonts/Pacifico-Regular.ttf");
+    src: local("Pacifico"), url("../fonts/Pacifico-Regular.ttf");
 }
 
 @font-face {
     font-family: "RacingSans"; /*Can be any text*/
     src: local("RacingSansOne-Regular"),
-        url("./fonts/RacingSansOne-Regular.ttf");
+        url("../fonts/RacingSansOne-Regular.ttf");
 }
 
 .nav {
@@ -114,4 +114,24 @@
 .search-button-container:hover {
     filter: brightness(130%);
     cursor: pointer;
+}
+
+/* media queries*/
+@media (max-width: 800px) {
+    .search-bar {
+        display: none;
+    }
+    .search-button-container {
+        display: none;
+    }
+    .site-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* very small displays, hide nav items -> hamburger menu */
+@media (max-width: 350px) {
+    .nav li {
+        display: none;
+    }
 }

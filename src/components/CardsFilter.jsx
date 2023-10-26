@@ -1,4 +1,4 @@
-import "../assets/CardsFilter.css";
+import "../assets/css/CardsFilter.css";
 
 const CardsFilter = () => {
     return (

@@ -32,3 +32,10 @@ select:hover {
     background-color: #cfcfcf;
     cursor: pointer;
 }
+
+/* media queries*/
+@media (max-width: 650px) {
+    .cards-filter-container select {
+        display: none;
+    }
+}

@@ -6,12 +6,12 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 // Import stylesheets
-import "./assets/Navbar.css";
-import "./assets/General.css";
+import "./assets/css/Navbar.css";
+import "./assets/css/General.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/automotive_marketplace">
             <App />
         </BrowserRouter>
     </React.StrictMode>

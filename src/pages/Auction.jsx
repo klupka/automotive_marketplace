@@ -1,5 +1,5 @@
-import "../assets/General.css";
-import "../assets/Auction.css";
+import "../assets/css/General.css";
+import "../assets/css/Auction.css";
 import { useLocation } from "react-router-dom";
 import { cars } from "../assets/sample_data";
 

@@ -3,7 +3,7 @@
 // useMatch is used to compare path data.
 // useResolvedPath returns the full, entire path of your url.
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import "../assets/Navbar.css";
+import "../assets/css/Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
